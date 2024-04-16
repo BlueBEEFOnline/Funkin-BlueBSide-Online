@@ -11,13 +11,12 @@ class OnlineState extends MusicBeatState {
 	var items:FlxTypedSpriteGroup<FlxText>;
 
 	var itms:Array<String> = [
-        "JOIN",
-        "HOST",
-        "FIND",
-		"OPTIONS",
-		"MOD DOWNLOADER",
-		"DISCORD",
-		"WIKI",
+        "CONECTAR",
+        "HOSPEDAR",
+        "ENCONTRAR",
+		"OPÇÕES",
+		"LISTA DE MODS",
+		"DOAR",
     ];
 
 	var itemDesc:FlxText;
@@ -143,7 +142,7 @@ class OnlineState extends MusicBeatState {
 				//playersOnline.applyMarkup("$•$ OFFLINE $•$", [new FlxTextFormatMarkerPair(new FlxTextFormat(FlxColor.GRAY), "$")]);
 			}
 			else {
-				playersOnline.text = 'Players Online: $v';
+				playersOnline.text = 'JOGADORES Online: $v';
 				//playersOnline.applyMarkup("$•$ Players Online: " + v + " $•$", [new FlxTextFormatMarkerPair(new FlxTextFormat(FlxColor.GREEN), "$")]);
 			}
 			
