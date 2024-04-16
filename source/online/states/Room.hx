@@ -165,7 +165,7 @@ class Room extends MusicBeatState {
 		super.create();
 
 		#if DISCORD_ALLOWED
-		DiscordClient.changePresence("In the Lobby", null, null, false);
+		DiscordClient.changePresence("Em Espera", null, null, false);
 		#end
 
 		WeekData.reloadWeekFiles(false);
@@ -244,7 +244,7 @@ class Room extends MusicBeatState {
 		chatBox = new ChatBox(camHUD, (cmd, args) -> {
 			switch (cmd) {
 				case "help":
-					ChatBox.addMessage("> Room Commands: /pa, /results");
+					ChatBox.addMessage("> Comandos do quarto: /pa, /results");
 					return true;
 				case "pa":
 					if (args[0] != null && args[0].trim() != "")
@@ -253,7 +253,7 @@ class Room extends MusicBeatState {
 						var anims = "";
 						for (anim in @:privateAccess getPlayer().animation._animations)
 							anims += '"${anim.name}" ';
-						ChatBox.addMessage("Please enter the animation you want to play!\nAvailable animations: " + anims);
+						ChatBox.addMessage("Enter para tocar o HEY! do seu personagem: " + anims);
 					}
 					return true;
 				case "results":
