@@ -33,7 +33,7 @@ class FindRoom extends MusicBeatState {
 		super.create();
 
 		#if DISCORD_ALLOWED
-		DiscordClient.changePresence("Finding a room.", null, null, false);
+		DiscordClient.changePresence("Calculando Quartos.", null, null, false);
 		#end
 
 		camera.follow(camFollow = new FlxObject(FlxG.width / 2), 0.1);
@@ -52,7 +52,7 @@ class FindRoom extends MusicBeatState {
 			refreshRooms(false);
 		}, 0);
 
-		tip = new FlxText(0, 0, 0, 'ACCEPT - Enter selected room.');
+		tip = new FlxText(0, 0, 0, 'Enter - Para Entrar.');
 		tip.setFormat("VCR OSD Mono", 18, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		tip.scrollFactor.set(0, 0);
 		tip.screenCenter(X);
@@ -114,7 +114,7 @@ class FindRoom extends MusicBeatState {
 				items.clear();
 
                 if (err != null) {
-					Alert.alert("Couldn't connect!", "ERROR: " + err.code + " - " + err.message + (GameClient.serverAddress.endsWith(".onrender.com") ? "\nTry again in a few minutes! The server is probably restarting!" : ""));
+					Alert.alert("UHG! Parece que ouve um erro de coneccao", "ERROR: " + err.code + " - " + err.message + (GameClient.serverAddress.endsWith(".onrender.com") ? "\nTry again in a few minutes! The server is probably restarting!" : ""));
                     return;
                 }
 
