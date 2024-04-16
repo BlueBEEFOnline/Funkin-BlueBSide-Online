@@ -31,10 +31,10 @@ class OptionsState extends MusicBeatState {
 		var i = 0;
 
 		var nicknameOption:InputOption;
-		items.add(nicknameOption = new InputOption("Nickname", "Set your nickname here!", "Boyfriend", true, text -> {
+		items.add(nicknameOption = new InputOption("Nickname", "Coloque seu Nome", "Boyfriend", true, text -> {
 			curOption.input.text = curOption.input.text.trim().substr(0, 20);
 			if (curOption.input.text == "")
-				ClientPrefs.data.nickname = "Boyfriend";
+				ClientPrefs.data.nickname = "NOVATO";
 			else
 				ClientPrefs.data.nickname = curOption.input.text;
 			ClientPrefs.saveSettings();
@@ -74,19 +74,19 @@ class OptionsState extends MusicBeatState {
 		// titleOption.ID = i++;
 
 		var skinsOption:InputOption;
-		items.add(skinsOption = new InputOption("Skin", "Choose your skin here!", null, false));
+		items.add(skinsOption = new InputOption("Skin", "SELECIONE SKINS", null, false));
 		skinsOption.y = serverOption.y + serverOption.height + 50;
 		skinsOption.screenCenter(X);
 		skinsOption.ID = i++;
 
 		var modsOption:InputOption;
-		items.add(modsOption = new InputOption("Setup Mods", "Set the URL's of your mods here!", null, false));
+		items.add(modsOption = new InputOption("CONFIG MODS", "Set the URL's of your mods here!", null, false));
 		modsOption.y = skinsOption.y + skinsOption.height + 50;
 		modsOption.screenCenter(X);
 		modsOption.ID = i++;
 
 		var trustedOption:InputOption;
-		items.add(trustedOption = new InputOption("Clear Trusted Domains", "Clear the list of all trusted domains!", null, false));
+		items.add(trustedOption = new InputOption("CLIMPAR CACHE DE DOMINIO", "Clear the list of all trusted domains!", null, false));
 		trustedOption.y = modsOption.y + modsOption.height + 50;
 		trustedOption.screenCenter(X);
 		trustedOption.ID = i++;
